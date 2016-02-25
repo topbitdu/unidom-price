@@ -12,4 +12,6 @@ class Unidom::Price::Price < ActiveRecord::Base
   scope :priced_by, ->(pricer) { where pricer: pricer }
   scope :priced_is, ->(priced) { where priced: priced }
 
+  include Unidom::Common::Concerns::ModelExtension
+
 end

@@ -18,5 +18,30 @@ rake db:migrate
 
 ## Call the Model
 ```ruby
-Unidom::Price::Price.valid_at.alive.first
+# Create 2 Prices for the same product
+product = Product.create name: 'iPhone 6S'
+pricer  = Person.create  name: 'John'
+price   = Unidom::Price::Price.create(priced: product,
+  pricer:           pricer,
+  calculation_code: 'AMNT',
+  pricing_code:     'BASE',
+  charging_code:    'ONCE',
+  currency_code:    'RMB',
+  amount:           20.00,
+  description:      'the normal price',
+  instruction:      'Here is a promotion coming soon.',
+  opened_at:        Time.now)
+promotion_price = Unidom::Price::Price.create(priced: product,
+  pricer:           pricer,
+  calculation_code: 'PCNT',
+  pricing_code:     'DSCT',
+  charging_code:    'ONCE',
+  currency_code:    'RMB',
+  amount:           15.00,
+  description:      'the promotion price',
+  instruction:      'Here is a promotion coming 1 week later.',
+  opened_at:        Time.now+7.days)
+
+# Find the prices.
+prices = Unidom::Price::Price.priced_is(product).priced_by(pricer).charging_coded_as('ONCE').currency_coded_as('RMB').valid_at.alive.first
 ```

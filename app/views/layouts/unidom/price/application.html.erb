@@ -3,12 +3,13 @@
 <head>
   <title>Price</title>
   <%= stylesheet_link_tag    "price/application", media: "all" %>
-  <%= javascript_include_tag "price/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+<%= javascript_include_tag "price/application" %>
 
 </body>
 </html>

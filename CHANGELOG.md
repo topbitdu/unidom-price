@@ -5,3 +5,7 @@
 
 ## v0.2
 1. Improved the Price model to include the Model Extension concern
+
+## v0.3
+1. Improved the Price model to add the ::price! method
+2. Improved the Ruby Gem Specification to depend on unidom-common v0.9

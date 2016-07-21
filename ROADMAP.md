@@ -7,4 +7,16 @@
 1. Improve the Price model to include the Model Extension concern
 
 ## v0.3
-1. Improve the Ruby Gem Specification to depend on unidom-common v0.9
+1. Improve the Price model to add the ::price! method
+2. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
+
+## v1.0
+1. Improve the Price model to support the Keyword Arguments
+
+## v1.1
+1. As Priced concern
+2. As Pricer concern
+
+## v1.2
+1. Improve the As Priced concern to add the #is_priced! method
+2. Improve the As Pricer concern to add the #price! method

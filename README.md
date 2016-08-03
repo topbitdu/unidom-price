@@ -51,5 +51,5 @@ promotion_price = Unidom::Price::Price.create(priced: product,
 prices = Unidom::Price::Price.priced_is(product).priced_by(pricer).charging_coded_as('ONCE').currency_coded_as('RMB').valid_at.alive.first
 
 # Price a product
-Unidom::Price::Price.price! product, amount
+Unidom::Price::Price.price! product, amount: 100
 ```

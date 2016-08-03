@@ -14,7 +14,7 @@ class Unidom::Price::Price < ActiveRecord::Base
   scope :priced_by, ->(pricer) { where pricer: pricer }
   scope :priced_is, ->(priced) { where priced: priced }
 
-  def self.price!(priced, amount, pricer = nil, calculation_code = 'AMNT', pricing_code = 'BASE', charging_code = 'ONCE', opened_at = Time.now)
+  def self.price!(priced, amount: 0, pricer: nil, calculation_code: 'AMNT', pricing_code: 'BASE', charging_code: 'ONCE', opened_at: Time.now)
     price = priced_is(priced).calculation_coded_as(calculation_code).pricing_coded_as(pricing_code).charging_coded_as(charging_code).valid_at.alive.first
     if price.present?
       price.amount = amount

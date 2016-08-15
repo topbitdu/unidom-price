@@ -12,3 +12,6 @@
 
 ## v1.0
 1. Improved the Price model to support the Keyword Arguments
+
+## v1.0.1
+1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0

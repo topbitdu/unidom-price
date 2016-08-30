@@ -53,3 +53,19 @@ prices = Unidom::Price::Price.priced_is(product).priced_by(pricer).charging_code
 # Price a product
 Unidom::Price::Price.price! product, amount: 100
 ```
+
+
+
+## Include the Concerns
+```ruby
+include Unidom::Price::Concerns::AsPriced
+include Unidom::Price::Concerns::AsPricer
+```
+
+### As Priced
+The As Priced concern do the following tasks for the includer automatically:  
+1. Define the has_many :prices macro as: ``has_many :prices, class_name: 'Unidom::Price::Price', as: :priced``
+
+### As Pricer
+The As Priced concern do the following tasks for the includer automatically:  
+1. Define the has_many :pricings macro as: ``has_many :pricings, class_name: 'Unidom::Price::Price', as: :pricer``

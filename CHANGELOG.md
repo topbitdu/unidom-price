@@ -15,3 +15,7 @@
 
 ## v1.0.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.0
+
+## v1.1
+1. As Priced concern
+2. As Pricer concern

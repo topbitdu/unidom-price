@@ -65,7 +65,9 @@ include Unidom::Price::Concerns::AsPricer
 ### As Priced
 The As Priced concern do the following tasks for the includer automatically:  
 1. Define the has_many :prices macro as: ``has_many :prices, class_name: 'Unidom::Price::Price', as: :priced``
+2. Define the #is_priced! method as: ``is_priced!(amount, by: nil, at: Time.now)``
 
 ### As Pricer
 The As Priced concern do the following tasks for the includer automatically:  
 1. Define the has_many :pricings macro as: ``has_many :pricings, class_name: 'Unidom::Price::Price', as: :pricer``
+2. Define the #price! method as: ``price!(it, amount, at: Time.now)``

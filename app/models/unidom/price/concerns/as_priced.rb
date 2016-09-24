@@ -12,9 +12,9 @@ module Unidom::Price::Concerns::AsPriced
       prices.create! pricer: by, amount: amount, opened_at: at
     end
 
-    #def is_priced?(at: Time.now)
-    #  prices.valid_at(now: at).alive.exists?
-    #end
+    def is_priced?(at: Time.now)
+      prices.valid_at(now: at).alive.exists?
+    end
 
   end
 

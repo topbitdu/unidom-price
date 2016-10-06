@@ -7,22 +7,34 @@
 Unidom (UNIfied Domain Object Model) is a series of domain model engines. The Price domain model engine includes Pricing and its relative models.
 Unidom (统一领域对象模型)是一系列的领域模型引擎。价格领域模型引擎包括定价及其相关的模型。
 
+
+
 ## Recent Update
+
 Check out the [Road Map](ROADMAP.md) to find out what's the next.
 Check out the [Change Log](CHANGELOG.md) to find out what's new.
 
+
+
 ## Usage in Gemfile
+
 ```ruby
 gem 'unidom-price'
 ```
 
+
+
 ## Run the Database Migration
+
 ```shell
 rake db:migrate
 ```
 The migration versions start with 200203.
 
+
+
 ## Call the Model
+
 ```ruby
 # Create 2 Prices for the same product
 product = Product.create name: 'iPhone 6S'
@@ -58,18 +70,21 @@ Unidom::Price::Price.price! product, amount: 100
 
 
 ## Include the Concerns
+
 ```ruby
 include Unidom::Price::Concerns::AsPriced
 include Unidom::Price::Concerns::AsPricer
 ```
 
 ### As Priced
+
 The As Priced concern do the following tasks for the includer automatically:  
 1. Define the has_many :prices macro as: ``has_many :prices, class_name: 'Unidom::Price::Price', as: :priced``
 2. Define the #is_priced! method as: ``is_priced!(amount, by: nil, at: Time.now)``
 3. Define the #is_priced? method as: ``is_priced?(at: Time.now)``
 
 ### As Pricer
+
 The As Priced concern do the following tasks for the includer automatically:  
 1. Define the has_many :pricings macro as: ``has_many :pricings, class_name: 'Unidom::Price::Price', as: :pricer``
 2. Define the #price! method as: ``price!(it, amount, at: Time.now)``

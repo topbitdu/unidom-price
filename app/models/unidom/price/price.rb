@@ -1,6 +1,6 @@
 # Price 是价格。
 
-class Unidom::Price::Price < ActiveRecord::Base
+class Unidom::Price::Price < Unidom::Price::ApplicationRecord
 
   self.table_name = 'unidom_prices'
 

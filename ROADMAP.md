@@ -33,3 +33,7 @@
 
 ## v1.3.2
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7
+
+## v1.4
+1. Improve the Ruby Gem Specification to depend on [progne_tapera](https://github.com/topbitdu/progne_tapera) v0.3
+2. Calculation enum code

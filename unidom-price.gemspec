@@ -20,5 +20,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = [ 'lib' ]
 
   spec.add_dependency 'unidom-common', '>= 1.7'
+  spec.add_dependency 'progne_tapera', '>= 0.3'
 
 end

@@ -37,3 +37,4 @@
 ## v1.4
 1. Improve the Ruby Gem Specification to depend on [progne_tapera](https://github.com/topbitdu/progne_tapera) v0.3
 2. Calculation enum code
+3. Improve the Price model to configure the Calculation enum code

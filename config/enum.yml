@@ -1,0 +1,7 @@
+enum:
+
+  unidom_calculation:
+    amount:
+      code: AMNT
+    percentage:
+      code: PCTG

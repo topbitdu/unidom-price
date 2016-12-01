@@ -89,3 +89,14 @@ The As Priced concern do the following tasks for the includer automatically:
 1. Define the has_many :pricings macro as: ``has_many :pricings, class_name: 'Unidom::Price::Price', as: :pricer``  
 2. Define the #price! method as: ``price!(it, amount, at: Time.now)``  
 3. Define the #price? method as: ``price?(it, at: Time.now)``
+
+
+
+## Enum codes
+
+### Calculation enum code
+
+```ruby
+Unidom::Price::Calculation::AMOUNT
+Unidom::Price::Calculation::PERCENTAGE
+```

@@ -7,7 +7,7 @@
 1. Improve the Price model to include the Model Extension concern
 
 ## v0.3
-1. Improve the Price model to add the ::price! method
+1. Improve the Price model to add the .``price!`` method
 2. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v0.9
 
 ## v1.0

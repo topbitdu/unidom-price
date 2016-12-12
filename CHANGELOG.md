@@ -21,7 +21,7 @@
 2. As Pricer concern
 
 ## v1.2
-1. Improved the As Priced concern to add the #is_priced! method
+1. Improved the As Priced concern to add the #``is_priced!`` method
 2. Improved the As Pricer concern to add the #price! method
 
 ## v1.3

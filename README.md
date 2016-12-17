@@ -97,6 +97,6 @@ The As Priced concern do the following tasks for the includer automatically:
 ### Calculation enum code
 
 ```ruby
-Unidom::Price::Calculation::AMOUNT
-Unidom::Price::Calculation::PERCENTAGE
+Unidom::Price::Calculation::AMOUNT     # 金额
+Unidom::Price::Calculation::PERCENTAGE # 百分比
 ```

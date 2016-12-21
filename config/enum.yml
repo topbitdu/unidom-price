@@ -5,3 +5,14 @@ enum:
       code: AMNT
     percentage:
       code: PCTG
+
+  unidom_charging:
+    one_time:
+      code: ONCE
+      description: such as for buying a good
+    recurring:
+      code: RECR
+      description: an ongoing charge such as a monthly fee for a standard type of service
+    utilization:
+      code: UTLZ
+      description: usage of a product

@@ -18,6 +18,7 @@ class Unidom::Price::Price < Unidom::Price::ApplicationRecord
   scope :priced_is, ->(priced) { where priced: priced }
 
   code :calculation, Unidom::Price::Calculation
+  code :charging,    Unidom::Price::Charging
 
   def self.price!(priced, amount: 0, pricer: nil, calculation_code: 'AMNT', pricing_code: 'BASE', charging_code: 'ONCE', opened_at: Time.now)
     price = priced_is(priced).calculation_coded_as(calculation_code).pricing_coded_as(pricing_code).charging_coded_as(charging_code).valid_at.alive.first

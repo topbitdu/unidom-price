@@ -100,3 +100,11 @@ The As Priced concern do the following tasks for the includer automatically:
 Unidom::Price::Calculation::AMOUNT     # 金额
 Unidom::Price::Calculation::PERCENTAGE # 百分比
 ```
+
+### Charging enum code
+
+```ruby
+Unidom::Price::Charging::ONE_TIME    # 一次性收费
+Unidom::Price::Charging::RECURRING   # 重复性收费
+Unidom::Price::Charging::UTILIZATION # 使用率收费
+```

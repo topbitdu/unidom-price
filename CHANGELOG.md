@@ -42,3 +42,7 @@
 ## v1.4.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
 2. Improve the Ruby Gem Specification to never depend on [progne_tapera](https://github.com/topbitdu/progne_tapera)
+
+## v1.5
+1. Charging enum code
+2. Improve the Price model to configure the Charging enum code

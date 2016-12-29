@@ -8,11 +8,25 @@ enum:
 
   unidom_charging:
     one_time:
-      code: ONCE
+      code:        ONCE
       description: such as for buying a good
     recurring:
-      code: RECR
+      code:        RECR
       description: an ongoing charge such as a monthly fee for a standard type of service
     utilization:
-      code: UTLZ
+      code:        UTLZ
       description: usage of a product
+
+  unidom_pricing:
+    base:
+      code: BASE
+      description: ...
+    discount:
+      code: DSCT
+      description: ...
+    surcharge:
+      code: SCHG
+      description: ...
+    manufacturer_suggested:
+      code: MFSG
+      description: ...

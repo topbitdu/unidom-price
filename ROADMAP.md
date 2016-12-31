@@ -46,3 +46,7 @@
 ## v1.5
 1. Charging enum code
 2. Improve the Price model to configure the Charging enum code
+
+## v1.6
+1. Pricing enum code
+2. Improve the Price model to configure the Pricing enum code

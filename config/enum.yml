@@ -20,13 +20,13 @@ enum:
   unidom_pricing:
     base:
       code: BASE
-      description: ...
+      description: 产品的起始价格
     discount:
       code: DSCT
-      description: ...
+      description: 相对于基价的有效折扣
     surcharge:
       code: SCHG
-      description: ...
+      description: 附加收费
     manufacturer_suggested:
       code: MFSG
-      description: ...
+      description:

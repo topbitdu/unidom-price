@@ -9,3 +9,9 @@
       one_time:    一次性收费
       recurring:   重复性收费
       utilization: 使用率收费
+
+    unidom_pricing:
+      base:                   基价
+      discount:               折扣成分
+      surcharge:              额外收费成分
+      manufacturer_suggested: 厂家建议价

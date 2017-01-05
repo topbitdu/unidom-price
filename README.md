@@ -78,16 +78,22 @@ include Unidom::Price::Concerns::AsPricer
 
 ### As Priced
 
-The As Priced concern do the following tasks for the includer automatically:  
-1. Define the has_many :prices macro as: ``has_many :prices, class_name: 'Unidom::Price::Price', as: :priced``  
-2. Define the #is_priced! method as: ``is_priced!(amount, by: nil, at: Time.now)``  
+The As Priced concern do the following tasks for the includer automatically:
+
+1. Define the has_many :prices macro as: ``has_many :prices, class_name: 'Unidom::Price::Price', as: :priced``
+
+2. Define the #is_priced! method as: ``is_priced!(amount, by: nil, at: Time.now)``
+
 3. Define the #is_priced? method as: ``is_priced?(at: Time.now)``
 
 ### As Pricer
 
-The As Priced concern do the following tasks for the includer automatically:  
-1. Define the has_many :pricings macro as: ``has_many :pricings, class_name: 'Unidom::Price::Price', as: :pricer``  
-2. Define the #price! method as: ``price!(it, amount, at: Time.now)``  
+The As Priced concern do the following tasks for the includer automatically:
+
+1. Define the has_many :pricings macro as: ``has_many :pricings, class_name: 'Unidom::Price::Price', as: :pricer``
+
+2. Define the #price! method as: ``price!(it, amount, at: Time.now)``
+
 3. Define the #price? method as: ``price?(it, at: Time.now)``
 
 
@@ -107,4 +113,13 @@ Unidom::Price::Calculation::PERCENTAGE # 百分比
 Unidom::Price::Charging::ONE_TIME    # 一次性收费
 Unidom::Price::Charging::RECURRING   # 重复性收费
 Unidom::Price::Charging::UTILIZATION # 使用率收费
+```
+
+### Pricing enum code
+
+```ruby
+Unidom::Price::Pricing::BASE                   # 基价
+Unidom::Price::Pricing::DISCOUNT               # 折扣成分
+Unidom::Price::Pricing::SURCHARGE              # 额外收费成分
+Unidom::Price::Pricing::MANUFACTURER_SUGGESTED # 厂家建议价
 ```

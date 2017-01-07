@@ -1,3 +1,6 @@
+##
+# As Priced 是被定价物品的领域逻辑关注点。
+
 module Unidom::Price::Concerns::AsPriced
 
   extend ActiveSupport::Concern

@@ -44,4 +44,4 @@ class Unidom::Price::Price < Unidom::Price::ApplicationRecord
     end
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Price::Price'

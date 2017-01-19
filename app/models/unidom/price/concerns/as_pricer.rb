@@ -1,3 +1,6 @@
+##
+# As Pricer 是定价者的领域逻辑关注点。
+
 module Unidom::Price::Concerns::AsPricer
 
   extend ActiveSupport::Concern

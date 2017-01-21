@@ -125,3 +125,19 @@ Unidom::Price::Pricing::DISCOUNT               # 折扣成分
 Unidom::Price::Pricing::SURCHARGE              # 额外收费成分
 Unidom::Price::Pricing::MANUFACTURER_SUGGESTED # 厂家建议价
 ```
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Price
+  }
+
+end
+```

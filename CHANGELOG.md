@@ -49,7 +49,7 @@
 
 ## v1.6
 1. Pricing enum code
-2. Improve the Price model to configure the Pricing enum code
+2. Improved the Price model to configure the Pricing enum code
 
 ## v1.6.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8

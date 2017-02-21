@@ -63,3 +63,6 @@
 1. Models RSpec examples manifest
 2. Types RSpec examples manifest
 3. Validators RSpec examples manifest
+
+## v1.7.1
+1. Improve the Price spec for the validations on the #amount attribute

@@ -9,7 +9,7 @@ class Unidom::Price::Price < Unidom::Price::ApplicationRecord
   include Unidom::Common::Concerns::ModelExtension
   include ProgneTapera::EnumCode
 
-  validates :amount, presence: true, numericality: { less_than: 1000000000, greater_than: 0 }
+  validates :amount, presence: true, numericality: { greater_than: 0, less_than: 1_000_000_000 }
 
   belongs_to :priced, polymorphic: true
   belongs_to :pricer, polymorphic: true
@@ -19,6 +19,7 @@ class Unidom::Price::Price < Unidom::Price::ApplicationRecord
 
   code :calculation, Unidom::Price::Calculation
   code :charging,    Unidom::Price::Charging
+  code :pricing,     Unidom::Price::Pricing
 
   ##
   # 将物品 priced 定价为 amount ， 定价者是 pricer。

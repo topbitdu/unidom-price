@@ -44,6 +44,10 @@ describe Unidom::Price::Price, type: :model do
       { amount: '1_000_000_000.01' } => 1,
       { amount: 1_000_000_000.01   } => 1
 
+    it_behaves_like 'ProgneTapera::EnumCode', described_class.new(model_attributes), :calculation, Unidom::Price::Calculation
+    it_behaves_like 'ProgneTapera::EnumCode', described_class.new(model_attributes), :charging,    Unidom::Price::Charging
+    it_behaves_like 'ProgneTapera::EnumCode', described_class.new(model_attributes), :pricing,     Unidom::Price::Pricing
+
   end
 
 end

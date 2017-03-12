@@ -146,6 +146,8 @@ end
 
 ## RSpec examples
 
+### RSpec example manifest (run automatically)
+
 ```ruby
 # spec/models/unidom_spec.rb
 require 'unidom/price/models_rspec'
@@ -155,4 +157,53 @@ require 'unidom/price/types_rspec'
 
 # spec/validators/unidom_spec.rb
 require 'unidom/price/validators_rspec'
+```
+
+### RSpec shared examples (to be integrated)
+
+```ruby
+# lib/unidom.rb
+def initialize_unidom
+
+  Unidom::Party::Person.class_eval do
+    include Unidom::Price::Concerns::AsPricer
+  end
+
+  Unidom::Product::Product.class_eval do
+    include Unidom::Price::Concerns::AsPriced
+  end
+
+end
+
+# spec/rails_helper.rb
+require 'unidom'
+initialize_unidom
+
+# spec/support/unidom_rspec_shared_examples.rb
+require 'unidom/price/rspec_shared_examples'
+
+# spec/models/unidom/party/person_spec.rb
+describe Unidom::Party::Person do
+
+  model_attribtues = {
+    name: 'Tim'
+  }
+
+  it_behaves_like 'Unidom::Price::Concerns::AsPricer', model_attribtues
+
+end
+
+# spec/models/unidom/position/post_spec.rb
+describe Unidom::Product::Product do
+
+  model_attribtues = {
+    name:             'Model X',
+    abbreviation:     'MX',
+    measurement_unit: 'set',
+    packing_norm:     '1 per 1'
+  }
+
+  it_behaves_like 'Unidom::Price::Concerns::AsPriced', model_attribtues
+
+end
 ```

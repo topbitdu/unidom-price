@@ -9,7 +9,7 @@ class Unidom::Price::Price < Unidom::Price::ApplicationRecord
   include Unidom::Common::Concerns::ModelExtension
   include ProgneTapera::EnumCode
 
-  validates :amount, presence: true, numericality: { greater_than: 0, less_than: 1_000_000_000 }
+  validates :amount, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 1_000_000_000 }
 
   belongs_to :priced, polymorphic: true
   belongs_to :pricer, polymorphic: true

@@ -76,3 +76,7 @@
 1. As Priced shared examples
 2. As Pricer shared examples
 3. RSpec shared examples manifest
+
+## v1.7.4
+1. Improve the Price model for the validations on the #amount attribute
+2. Improve the Price spec for the validations on the #amount attribute

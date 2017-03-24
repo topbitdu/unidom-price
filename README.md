@@ -203,7 +203,9 @@ describe Unidom::Product::Product do
     packing_norm:     '1 per 1'
   }
 
-  it_behaves_like 'Unidom::Price::Concerns::AsPriced', model_attribtues
+  pricer = Unidom::Party::Person.create! name: 'Tim'
+
+  it_behaves_like 'Unidom::Price::Concerns::AsPriced', model_attribtues, pricer
 
 end
 ```

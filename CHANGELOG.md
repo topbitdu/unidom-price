@@ -80,3 +80,7 @@
 ## v1.7.4
 1. Improve the Price model for the validations on the #amount attribute
 2. Improve the Price spec for the validations on the #amount attribute
+
+## v1.7.5
+1. Improve the As Priced shared examples for the #is_priced! method, & the #is_priced? method
+2. Improve the As Priced concern for the argument validation

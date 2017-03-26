@@ -84,3 +84,7 @@
 ## v1.7.5
 1. Improve the As Priced shared examples for the #is_priced! method, & the #is_priced? method
 2. Improve the As Priced concern for the argument validation
+
+## v1.7.6
+1. Improve the As Priced shared examples for the #is_priced! method, & the #is_priced? method
+2. Improve the Price model for the argument validation

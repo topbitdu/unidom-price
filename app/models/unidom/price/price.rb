@@ -24,6 +24,14 @@ class Unidom::Price::Price < Unidom::Price::ApplicationRecord
   ##
   # 将物品 priced 定价为 amount ， 定价者是 pricer。
   def self.price!(priced, amount: 0, pricer: nil, calculation_code: 'AMNT', pricing_code: 'BASE', charging_code: 'ONCE', opened_at: Time.now)
+
+    assert_present! :priced,           priced
+    assert_present! :amount,           amount
+    assert_present! :calculation_code, calculation_code
+    assert_present! :pricing_code,     pricing_code
+    assert_present! :charging_code,    charging_code
+    assert_present! :opened_at,        opened_at
+
     price = priced_is(priced).calculation_coded_as(calculation_code).pricing_coded_as(pricing_code).charging_coded_as(charging_code).valid_at.alive.first
     if price.present?
       price.amount = amount

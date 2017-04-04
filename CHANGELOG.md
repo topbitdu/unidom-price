@@ -65,7 +65,7 @@
 3. Validators RSpec examples manifest
 
 ## v1.7.1
-1. Improve the Price spec for the validations on the #``amount`` attribute
+1. Improved the Price spec for the validations on the #``amount`` attribute
 
 ## v1.7.2
 1. Improve the Price model to configure the Pricing enum code

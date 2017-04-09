@@ -10,10 +10,6 @@ shared_examples 'Unidom::Price::Concerns::AsPriced' do |model_attributes, pricer
 
   context '#is_priced!' do
 
-    #it 'should reject the amount argument = nil' do expect { @priced.is_priced! nil,     by: pricer, at: Time.now }.to raise_error(ArgumentError, 'The amount argument is required.') end
-    #it 'should reject the by argument = nil'     do expect { @priced.is_priced! @amount, by: nil,    at: Time.now }.to raise_error(ArgumentError, 'The by argument is required.')     end
-    #it 'should reject the at argument = nil'     do expect { @priced.is_priced! @amount, by: pricer, at: nil      }.to raise_error(ArgumentError, 'The at argument is required.')     end
-
     it "should be able to be priced by #{pricer.inspect}" do
       price = @priced.is_priced! @amount, by: pricer
       expect(price).to     be_present
@@ -31,8 +27,6 @@ shared_examples 'Unidom::Price::Concerns::AsPriced' do |model_attributes, pricer
   end
 
   context '#is_priced?' do
-
-    #it 'should reject the at argument = nil' do expect { @priced.is_priced? at: nil }.to raise_error(ArgumentError, 'The at argument is required.') end
 
     it "should be able to be priced by #{pricer.inspect}" do
       expect(@priced.is_priced?).to be_falsey

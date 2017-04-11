@@ -183,29 +183,45 @@ initialize_unidom
 require 'unidom/price/rspec_shared_examples'
 
 # spec/models/unidom/party/person_spec.rb
-describe Unidom::Party::Person do
+describe Unidom::Party::Person, type: :model do
 
-  model_attribtues = {
-    name: 'Tim'
-  }
+  context do
 
-  it_behaves_like 'Unidom::Price::Concerns::AsPricer', model_attribtues
+    model_attribtues = {
+      name: 'Tim'
+    }
+
+    priced_attributes = {
+      name:             'Model X',
+      abbreviation:     'MX',
+      measurement_unit: 'set',
+      packing_norm:     '1 per 1'
+    }
+    priced = Unidom::Product::Product.create! priced_attributes
+
+    it_behaves_like 'Unidom::Price::Concerns::AsPricer', model_attribtues, priced
+
+  end
 
 end
 
 # spec/models/unidom/position/post_spec.rb
-describe Unidom::Product::Product do
+describe Unidom::Product::Product, type: :model do
 
-  model_attribtues = {
-    name:             'Model X',
-    abbreviation:     'MX',
-    measurement_unit: 'set',
-    packing_norm:     '1 per 1'
-  }
+  context do
 
-  pricer = Unidom::Party::Person.create! name: 'Tim'
+    model_attribtues = {
+      name:             'Model X',
+      abbreviation:     'MX',
+      measurement_unit: 'set',
+      packing_norm:     '1 per 1'
+    }
 
-  it_behaves_like 'Unidom::Price::Concerns::AsPriced', model_attribtues, pricer
+    pricer = Unidom::Party::Person.create! name: 'Tim'
+
+    it_behaves_like 'Unidom::Price::Concerns::AsPriced', model_attribtues, pricer
+
+  end
 
 end
 ```

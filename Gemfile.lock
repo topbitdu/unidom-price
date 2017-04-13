@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unidom-price (1.7.6)
+    unidom-price (1.7.7)
       unidom-common (~> 1.9)
 
 GEM

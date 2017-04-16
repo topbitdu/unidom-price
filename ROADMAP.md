@@ -92,3 +92,6 @@
 ## v1.7.7
 1. Improve the As Pricer concern for the argument validations of the #price! method, & the #price? method
 2. Improve the As Pricer shared examples for the argument validations of the #price! method, & the #price? method
+
+## v1.7.8
+1. Improve the As Pricer shared examples for the #price! method, & the #price? method

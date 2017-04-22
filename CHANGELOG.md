@@ -68,7 +68,7 @@
 1. Improved the Price spec for the validations on the #``amount`` attribute
 
 ## v1.7.2
-1. Improve the Price model to configure the Pricing enum code
+1. Improved the Price model to configure the Pricing enum code
 2. Improve the Price model for the validations on the #amount attribute
 3. Improve the Price spec for the validations on the #calculation_code attribute, the #charging_code attribute, & the #pricing_code attribute
 

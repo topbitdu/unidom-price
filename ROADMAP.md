@@ -99,3 +99,7 @@
 ## v1.7.9
 1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
 2. Improve the Price migration for the #opened_at column, & the #closed_at column
+
+## v1.7.10
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.11
+2. Improve the Price migration for the #state column
